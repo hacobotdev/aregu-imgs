@@ -91,7 +91,7 @@ async function run() {
 
     console.log(`✨ Descarga finalizada. Nuevos archivos guardados: ${downloadedCount}`);
 
-    /*if (downloadedCount > 0) {
+    if (downloadedCount > 0) {
       console.log('📌 3. Agregando cambios a Git (git add)...');
       execSync('git add .', { stdio: 'inherit' });
 
@@ -107,7 +107,7 @@ async function run() {
       console.log('✅ ¡Sincronización y push completados con éxito!');
     } else {
       console.log('ℹ️ No hay archivos nuevos para sincronizar. No se requiere commit.');
-    }*/
+    }
 
   } catch (error) {
     console.error('❌ Error durante el proceso de sincronización:', error);
