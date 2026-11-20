@@ -1,5 +1,5 @@
 {
-  "generado_en": "2026-11-12T00:59:47.006Z",
+  "generado_en": "2026-11-20T17:11:48.815Z",
   "tenants": [
     {
       "id": 1,
@@ -21,6 +21,49 @@
         }
       ],
       "timezone": "America/Hermosillo"
+    },
+    {
+      "id": 2,
+      "nombre": "Negocio Demo",
+      "descripcion": "efgdfgdfgasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf",
+      "latitud": 29.155642,
+      "longitud": -110.982857,
+      "horarios": [
+        {
+          "dias": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "cierre": "18:00",
+          "apertura": "09:00"
+        }
+      ],
+      "timezone": "America/Mexico_City"
+    },
+    {
+      "id": 3,
+      "nombre": "Dogos Prueba",
+      "descripcion": "Negocio 3 de prueba para poder visualizar en portal de comensales",
+      "latitud": 29.152269,
+      "longitud": -110.974016,
+      "horarios": [
+        {
+          "dias": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "cierre": "18:00",
+          "apertura": "09:00"
+        }
+      ],
+      "timezone": "America/Mexico_City"
     }
   ]
 }
