@@ -1,0 +1,504 @@
+{
+  "generado_en": "2026-11-12T00:59:47.006Z",
+  "tenant": {
+    "id": 1,
+    "nombre": "Mi Negocio",
+    "descripcion": "Comida de cosas y jalapekjnsdvjkn sdfhsdf sdfujsdkfsdfh sdfkbns usdf",
+    "latitud": 29.167926,
+    "longitud": -110.982524,
+    "horarios": [
+      {
+        "dias": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "cierre": "18:00",
+        "apertura": "09:00"
+      }
+    ],
+    "timezone": "America/Hermosillo"
+  },
+  "productos": [
+    {
+      "producto_id": 6,
+      "tenant_id": 1,
+      "nombre": "Horchata",
+      "descripcion": null,
+      "precio": "25.00",
+      "categoria_id": 1,
+      "imagen": "t/1/productos/098080d934270d3fe3e840a976020ebe90cc6e573186983e233796e9f4d0e63b.jpg",
+      "orden": 1,
+      "activo": true,
+      "creado_en": "2026-09-28T05:08:07.899Z",
+      "imagen_thumb": "t/1/productos/098080d934270d3fe3e840a976020ebe90cc6e573186983e233796e9f4d0e63b_thumb.jpg"
+    },
+    {
+      "producto_id": 1,
+      "tenant_id": 1,
+      "nombre": "Hotdog sencillo",
+      "descripcion": null,
+      "precio": "80.00",
+      "categoria_id": 2,
+      "imagen": "t/1/productos/429c5cd4bf7655c500a8eb7a5c731cf391700380abc69695923e7d177a4cb4cf.jpg",
+      "orden": 1,
+      "activo": true,
+      "creado_en": "2026-09-25T20:47:31.917Z",
+      "imagen_thumb": "t/1/productos/429c5cd4bf7655c500a8eb7a5c731cf391700380abc69695923e7d177a4cb4cf_thumb.jpg"
+    },
+    {
+      "producto_id": 9,
+      "tenant_id": 1,
+      "nombre": "Pay de limon",
+      "descripcion": null,
+      "precio": "45.00",
+      "categoria_id": 3,
+      "imagen": "t/1/productos/b63ca50901131a9208fdc985af11781c281e47ee5570edfe48137232d850cf0a.jpg",
+      "orden": 1,
+      "activo": true,
+      "creado_en": "2026-09-28T05:08:52.539Z",
+      "imagen_thumb": "t/1/productos/b63ca50901131a9208fdc985af11781c281e47ee5570edfe48137232d850cf0a_thumb.jpg"
+    },
+    {
+      "producto_id": 10,
+      "tenant_id": 1,
+      "nombre": "Galleta de costco",
+      "descripcion": null,
+      "precio": "25.00",
+      "categoria_id": 3,
+      "imagen": "t/1/productos/1fc8fa45bf159a1ceff8a8504273c5a4da305dc43577bdf071f6eee9f882dfb9.jpg",
+      "orden": 2,
+      "activo": true,
+      "creado_en": "2026-09-28T05:09:09.769Z",
+      "imagen_thumb": "t/1/productos/1fc8fa45bf159a1ceff8a8504273c5a4da305dc43577bdf071f6eee9f882dfb9_thumb.jpg"
+    },
+    {
+      "producto_id": 2,
+      "tenant_id": 1,
+      "nombre": "Hotdog doble",
+      "descripcion": null,
+      "precio": "90.00",
+      "categoria_id": 2,
+      "imagen": "t/1/productos/429c5cd4bf7655c500a8eb7a5c731cf391700380abc69695923e7d177a4cb4cf.jpg",
+      "orden": 2,
+      "activo": true,
+      "creado_en": "2026-09-28T04:50:39.654Z",
+      "imagen_thumb": "t/1/productos/429c5cd4bf7655c500a8eb7a5c731cf391700380abc69695923e7d177a4cb4cf_thumb.jpg"
+    },
+    {
+      "producto_id": 7,
+      "tenant_id": 1,
+      "nombre": "Jamaica",
+      "descripcion": null,
+      "precio": "25.00",
+      "categoria_id": 1,
+      "imagen": "t/1/productos/529fa49c92c13f4c5c6470227e6c0e8fb462cf37b1b72bfb1f095e230760f023.jpg",
+      "orden": 2,
+      "activo": true,
+      "creado_en": "2026-09-28T05:08:22.270Z",
+      "imagen_thumb": "t/1/productos/529fa49c92c13f4c5c6470227e6c0e8fb462cf37b1b72bfb1f095e230760f023_thumb.jpg"
+    },
+    {
+      "producto_id": 11,
+      "tenant_id": 1,
+      "nombre": "Helado de leche",
+      "descripcion": null,
+      "precio": "18.00",
+      "categoria_id": 3,
+      "imagen": "t/1/productos/8e336026bdb1035eefc905ef25b286c25bd142f259d98a2499135009ee878c11.jpg",
+      "orden": 3,
+      "activo": true,
+      "creado_en": "2026-09-28T05:09:38.899Z",
+      "imagen_thumb": "t/1/productos/8e336026bdb1035eefc905ef25b286c25bd142f259d98a2499135009ee878c11_thumb.jpg"
+    },
+    {
+      "producto_id": 3,
+      "tenant_id": 1,
+      "nombre": "Hotdog jumbo",
+      "descripcion": null,
+      "precio": "110.00",
+      "categoria_id": 2,
+      "imagen": "t/1/productos/429c5cd4bf7655c500a8eb7a5c731cf391700380abc69695923e7d177a4cb4cf.jpg",
+      "orden": 3,
+      "activo": true,
+      "creado_en": "2026-09-28T04:50:57.991Z",
+      "imagen_thumb": "t/1/productos/429c5cd4bf7655c500a8eb7a5c731cf391700380abc69695923e7d177a4cb4cf_thumb.jpg"
+    },
+    {
+      "producto_id": 8,
+      "tenant_id": 1,
+      "nombre": "Refresco",
+      "descripcion": null,
+      "precio": "30.00",
+      "categoria_id": 1,
+      "imagen": "t/1/productos/8f0a661d4e35e9466be44a6024d307da92048e89442bc4e6c4635432e8efcae3.jpg",
+      "orden": 3,
+      "activo": true,
+      "creado_en": "2026-09-28T05:08:36.145Z",
+      "imagen_thumb": "t/1/productos/8f0a661d4e35e9466be44a6024d307da92048e89442bc4e6c4635432e8efcae3_thumb.jpg"
+    },
+    {
+      "producto_id": 4,
+      "tenant_id": 1,
+      "nombre": "Salchipapas",
+      "descripcion": null,
+      "precio": "60.00",
+      "categoria_id": 2,
+      "imagen": "t/1/productos/89c93fba561d7a9bf297c7adbf89c76855c33b1507e00752fdbd3845dfdf8751.jpg",
+      "orden": 4,
+      "activo": true,
+      "creado_en": "2026-09-28T04:51:23.527Z",
+      "imagen_thumb": "t/1/productos/89c93fba561d7a9bf297c7adbf89c76855c33b1507e00752fdbd3845dfdf8751_thumb.jpg"
+    },
+    {
+      "producto_id": 5,
+      "tenant_id": 1,
+      "nombre": "Hamburguesa",
+      "descripcion": null,
+      "precio": "85.00",
+      "categoria_id": 2,
+      "imagen": "t/1/productos/104c22d2b5e2ecb7b4c866bca91f0d8ddb3671303ff14f09dc046394cb41ccbc.jpg",
+      "orden": 5,
+      "activo": true,
+      "creado_en": "2026-09-28T05:07:51.310Z",
+      "imagen_thumb": "t/1/productos/104c22d2b5e2ecb7b4c866bca91f0d8ddb3671303ff14f09dc046394cb41ccbc_thumb.jpg"
+    },
+    {
+      "producto_id": 13,
+      "tenant_id": 1,
+      "nombre": "Rebanada de pizza",
+      "descripcion": null,
+      "precio": "35.00",
+      "categoria_id": 2,
+      "imagen": "t/1/productos/f02245864e3806bc99b86d87e75cbcde2899d917e257ea8a37c5799170920cd2.jpg",
+      "orden": 6,
+      "activo": true,
+      "creado_en": "2026-11-03T06:07:44.133Z",
+      "imagen_thumb": "t/1/productos/f02245864e3806bc99b86d87e75cbcde2899d917e257ea8a37c5799170920cd2_thumb.jpg"
+    },
+    {
+      "producto_id": 14,
+      "tenant_id": 1,
+      "nombre": "Sandwich de queso",
+      "descripcion": null,
+      "precio": "55.00",
+      "categoria_id": 2,
+      "imagen": "t/1/productos/8950aeb18c2b4396f44db182557647d379512ffd087f77fc886d8780a45b286b.jpg",
+      "orden": 7,
+      "activo": true,
+      "creado_en": "2026-11-03T06:26:45.168Z",
+      "imagen_thumb": "t/1/productos/8950aeb18c2b4396f44db182557647d379512ffd087f77fc886d8780a45b286b_thumb.jpg"
+    }
+  ],
+  "categorias": [
+    {
+      "categoria_id": 2,
+      "tenant_id": 1,
+      "nombre": "Comida",
+      "orden": 1,
+      "activo": true
+    },
+    {
+      "categoria_id": 1,
+      "tenant_id": 1,
+      "nombre": "Bebidas",
+      "orden": 2,
+      "activo": true
+    },
+    {
+      "categoria_id": 3,
+      "tenant_id": 1,
+      "nombre": "Postres",
+      "orden": 3,
+      "activo": true
+    }
+  ],
+  "modificadores": [
+    {
+      "modifier_id": 1,
+      "tenant_id": 1,
+      "nombre": "Tamaño de combo",
+      "descripcion": null,
+      "tipo": "single",
+      "obligatorio": true,
+      "default_ids": [],
+      "orden": 1,
+      "activo": true,
+      "creado_en": "2026-09-25T20:46:07.161Z",
+      "max_selecciones": null
+    },
+    {
+      "modifier_id": 2,
+      "tenant_id": 1,
+      "nombre": "Ingredientes de doggo",
+      "descripcion": null,
+      "tipo": "multiple",
+      "obligatorio": false,
+      "default_ids": [],
+      "orden": 2,
+      "activo": true,
+      "creado_en": "2026-09-25T21:02:56.960Z",
+      "max_selecciones": null
+    },
+    {
+      "modifier_id": 3,
+      "tenant_id": 1,
+      "nombre": "Complementos",
+      "descripcion": null,
+      "tipo": "multiple",
+      "obligatorio": false,
+      "default_ids": [],
+      "orden": 3,
+      "activo": true,
+      "creado_en": "2026-09-28T04:47:31.279Z",
+      "max_selecciones": 5
+    }
+  ],
+  "modificadores_opciones": [
+    {
+      "opcion_id": 4,
+      "modifier_id": 1,
+      "tenant_id": 1,
+      "nombre": "Chico",
+      "precio_extra": "0.00",
+      "orden": 1,
+      "activo": true,
+      "creado_en": "2026-09-25T21:02:37.660Z"
+    },
+    {
+      "opcion_id": 2,
+      "modifier_id": 1,
+      "tenant_id": 1,
+      "nombre": "Mediano",
+      "precio_extra": "10.00",
+      "orden": 2,
+      "activo": true,
+      "creado_en": "2026-09-25T20:46:39.956Z"
+    },
+    {
+      "opcion_id": 1,
+      "modifier_id": 1,
+      "tenant_id": 1,
+      "nombre": "Grande",
+      "precio_extra": "20.00",
+      "orden": 3,
+      "activo": true,
+      "creado_en": "2026-09-25T20:46:31.465Z"
+    },
+    {
+      "opcion_id": 6,
+      "modifier_id": 2,
+      "tenant_id": 1,
+      "nombre": "Tomate",
+      "precio_extra": "0.00",
+      "orden": 1,
+      "activo": true,
+      "creado_en": "2026-09-25T21:03:13.900Z"
+    },
+    {
+      "opcion_id": 7,
+      "modifier_id": 2,
+      "tenant_id": 1,
+      "nombre": "Mayonesa",
+      "precio_extra": "0.00",
+      "orden": 2,
+      "activo": true,
+      "creado_en": "2026-09-25T21:03:20.830Z"
+    },
+    {
+      "opcion_id": 5,
+      "modifier_id": 2,
+      "tenant_id": 1,
+      "nombre": "Cebolla",
+      "precio_extra": "0.00",
+      "orden": 3,
+      "activo": true,
+      "creado_en": "2026-09-25T21:03:06.159Z"
+    },
+    {
+      "opcion_id": 8,
+      "modifier_id": 2,
+      "tenant_id": 1,
+      "nombre": "Tocino",
+      "precio_extra": "10.00",
+      "orden": 4,
+      "activo": true,
+      "creado_en": "2026-09-25T21:03:33.176Z"
+    },
+    {
+      "opcion_id": 9,
+      "modifier_id": 3,
+      "tenant_id": 1,
+      "nombre": "Tocino",
+      "precio_extra": "5.00",
+      "orden": 1,
+      "activo": true,
+      "creado_en": "2026-09-28T04:48:01.833Z"
+    },
+    {
+      "opcion_id": 10,
+      "modifier_id": 3,
+      "tenant_id": 1,
+      "nombre": "Queso amarillo",
+      "precio_extra": "0.00",
+      "orden": 2,
+      "activo": true,
+      "creado_en": "2026-09-28T04:48:13.508Z"
+    },
+    {
+      "opcion_id": 11,
+      "modifier_id": 3,
+      "tenant_id": 1,
+      "nombre": "Pepinillos",
+      "precio_extra": "0.00",
+      "orden": 3,
+      "activo": true,
+      "creado_en": "2026-09-28T04:48:29.052Z"
+    },
+    {
+      "opcion_id": 12,
+      "modifier_id": 3,
+      "tenant_id": 1,
+      "nombre": "Chile güerito",
+      "precio_extra": "0.00",
+      "orden": 4,
+      "activo": true,
+      "creado_en": "2026-09-28T04:48:42.062Z"
+    },
+    {
+      "opcion_id": 13,
+      "modifier_id": 3,
+      "tenant_id": 1,
+      "nombre": "Aderezo chipotle",
+      "precio_extra": "0.00",
+      "orden": 5,
+      "activo": true,
+      "creado_en": "2026-09-28T04:48:53.968Z"
+    },
+    {
+      "opcion_id": 14,
+      "modifier_id": 3,
+      "tenant_id": 1,
+      "nombre": "Cebolla caramelizada",
+      "precio_extra": "0.00",
+      "orden": 6,
+      "activo": true,
+      "creado_en": "2026-09-28T04:49:04.471Z"
+    },
+    {
+      "opcion_id": 15,
+      "modifier_id": 3,
+      "tenant_id": 1,
+      "nombre": "Chorizo",
+      "precio_extra": "0.00",
+      "orden": 7,
+      "activo": true,
+      "creado_en": "2026-09-28T04:49:27.058Z"
+    },
+    {
+      "opcion_id": 16,
+      "modifier_id": 3,
+      "tenant_id": 1,
+      "nombre": "Discada",
+      "precio_extra": "0.00",
+      "orden": 8,
+      "activo": true,
+      "creado_en": "2026-09-28T04:49:32.590Z"
+    },
+    {
+      "opcion_id": 17,
+      "modifier_id": 3,
+      "tenant_id": 1,
+      "nombre": "Salsa sonora",
+      "precio_extra": "0.00",
+      "orden": 9,
+      "activo": true,
+      "creado_en": "2026-09-28T04:49:49.695Z"
+    }
+  ],
+  "productos_modificadores": [
+    {
+      "producto_id": 1,
+      "modifier_id": 1,
+      "tenant_id": 1
+    },
+    {
+      "producto_id": 1,
+      "modifier_id": 2,
+      "tenant_id": 1
+    },
+    {
+      "producto_id": 1,
+      "modifier_id": 3,
+      "tenant_id": 1
+    },
+    {
+      "producto_id": 2,
+      "modifier_id": 1,
+      "tenant_id": 1
+    },
+    {
+      "producto_id": 2,
+      "modifier_id": 2,
+      "tenant_id": 1
+    },
+    {
+      "producto_id": 2,
+      "modifier_id": 3,
+      "tenant_id": 1
+    },
+    {
+      "producto_id": 3,
+      "modifier_id": 1,
+      "tenant_id": 1
+    },
+    {
+      "producto_id": 3,
+      "modifier_id": 2,
+      "tenant_id": 1
+    },
+    {
+      "producto_id": 3,
+      "modifier_id": 3,
+      "tenant_id": 1
+    },
+    {
+      "producto_id": 4,
+      "modifier_id": 2,
+      "tenant_id": 1
+    },
+    {
+      "producto_id": 5,
+      "modifier_id": 1,
+      "tenant_id": 1
+    },
+    {
+      "producto_id": 5,
+      "modifier_id": 2,
+      "tenant_id": 1
+    }
+  ],
+  "descuentos": [
+    {
+      "descuento_id": 2,
+      "tenant_id": 1,
+      "nombre": "2x1 Hamburguesas",
+      "monto": "85.00",
+      "dias": [
+        2
+      ],
+      "orden": 1,
+      "activo": true,
+      "creado_en": "2026-10-12T23:09:16.732Z"
+    }
+  ],
+  "descuentos_productos": [
+    {
+      "descuento_id": 2,
+      "producto_id": 5,
+      "tenant_id": 1
+    }
+  ]
+}

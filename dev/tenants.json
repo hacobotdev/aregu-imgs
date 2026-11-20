@@ -1,0 +1,26 @@
+{
+  "generado_en": "2026-11-12T00:59:47.006Z",
+  "tenants": [
+    {
+      "id": 1,
+      "nombre": "Mi Negocio",
+      "descripcion": "Comida de cosas y jalapekjnsdvjkn sdfhsdf sdfujsdkfsdfh sdfkbns usdf",
+      "latitud": 29.167926,
+      "longitud": -110.982524,
+      "horarios": [
+        {
+          "dias": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "cierre": "18:00",
+          "apertura": "09:00"
+        }
+      ],
+      "timezone": "America/Hermosillo"
+    }
+  ]
+}
