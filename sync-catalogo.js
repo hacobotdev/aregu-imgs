@@ -28,6 +28,11 @@ import dotenv from 'dotenv';
 // Opcionales:
 //   URL_PREFIX_TO_STRIP   prefijo de R2/imgs a quitar para dejar rutas del repo
 //   INCLUIR_INACTIVOS     "true" para no filtrar productos/categorías inactivos
+//   PURGAR_CDN            "false" para NO purgar jsDelivr tras publicar
+//
+// Después del `git push` purga en jsDelivr cada archivo que cambió, para que el
+// portal público (que pide la URL de la rama, sin `?v=` ni fechas) vea la
+// versión nueva en la siguiente carga y no dentro de ~12 h.
 // ============================================================
 
 const args = process.argv.slice(2);
@@ -44,6 +49,12 @@ const API_KEY = process.env.API_KEY;
 const STAGE = process.env.STAGE;
 const URL_PREFIX = process.env.URL_PREFIX_TO_STRIP || '';
 const SOLO_ACTIVOS = process.env.INCLUIR_INACTIVOS !== 'true';
+const PURGAR_CDN = process.env.PURGAR_CDN !== 'false';
+
+// jsDelivr sirve la rama `main` de este repo; purgar una ruta puntual hace que
+// el borde vuelva a leer de GitHub.
+const CDN_REPO = 'hacobotdev/aregu-imgs';
+const PURGE_BASE = 'https://purge.jsdelivr.net/gh';
 
 const OUT_DIR = path.join(process.cwd(), STAGE || '');
 const GENERAL_FILE = path.join(OUT_DIR, 'tenants.json');
@@ -229,10 +240,55 @@ function limpiarObsoletos(idsVigentes) {
   return obsoletos;
 }
 
-/** git add + commit + push, solo si la carpeta de catálogo quedó con cambios. */
-function publicar() {
+/**
+ * Purga en jsDelivr los archivos recién publicados.
+ *
+ * Se purga DESPUÉS del push: si se hiciera antes, jsDelivr releería la versión
+ * vieja de GitHub. El portal pide siempre la URL de la rama, sin `?v=` ni
+ * fechas, así que esta purga es lo que hace que el catálogo nuevo se vea en la
+ * siguiente carga. Las imágenes no se purgan: su nombre lleva el hash del
+ * contenido, así que una imagen nueva es una URL nueva.
+ */
+async function purgarCdn(archivos) {
+  if (!archivos.length) return;
+
+  if (!PURGAR_CDN) {
+    console.log('ℹ️  PURGAR_CDN=false: no se purgó jsDelivr (los cambios pueden tardar ~12 h en verse).');
+    return;
+  }
+
+  // Margen para que GitHub exponga el commit recién subido a jsDelivr.
+  await new Promise(r => setTimeout(r, 2000));
+
+  let fallidos = 0;
+
+  for (const archivo of archivos) {
+    const url = `${PURGE_BASE}/${CDN_REPO}@main/${STAGE}/${archivo}`;
+
+    try {
+      const res = await fetch(url, { signal: AbortSignal.timeout(15_000) });
+      const cuerpo = await res.json().catch(() => null);
+
+      if (res.ok && cuerpo?.status !== 'failed') {
+        console.log(`♻️  ${archivo} → purgado en jsDelivr`);
+      } else {
+        fallidos++;
+        console.warn(`⚠️  ${archivo} → jsDelivr no confirmó la purga (HTTP ${res.status}). Purga a mano: ${url}`);
+      }
+    } catch (error) {
+      fallidos++;
+      console.warn(`⚠️  ${archivo} → no se pudo purgar (${error.message}). Purga a mano: ${url}`);
+    }
+  }
+
+  if (fallidos)
+    console.log(`⚠️  ${fallidos} archivo(s) sin purgar: el portal los verá cuando expire la caché (~12 h) o al purgarlos a mano.`);
+}
+
+/** git add + commit + push, y purga en jsDelivr lo publicado. */
+async function publicar(archivos) {
   if (NO_GIT) {
-    console.log('ℹ️  --no-git: archivos escritos sin commit ni push.');
+    console.log('ℹ️  --no-git: archivos escritos sin commit ni push (y sin purga de jsDelivr).');
     return;
   }
 
@@ -257,6 +313,8 @@ function publicar() {
   execSync('git push origin main', { stdio: 'inherit' });
 
   console.log('✅ Catálogo publicado.');
+
+  await purgarCdn(archivos);
 }
 
 // ── Flujo principal ───────────────────────────────────────────────────────────
@@ -327,7 +385,7 @@ async function run() {
     return;
   }
 
-  publicar();
+  await publicar([...escritos, ...obsoletos]);
 }
 
 run().catch(error => {

@@ -67,8 +67,21 @@ Cron sugerido (cada 2 horas):
 
 ## Caché del CDN
 
-jsDelivr cachea las rutas por rama (~12 h). El portal público le agrega
-`?v=<VITE_CATALOGO_VERSION>` a cada petición, así que tras una publicación
-conviene subir esa versión y reconstruir, o purgar la URL en jsDelivr; si no, el
-menú puede tardar medio día en ver los cambios.
+jsDelivr cachea las rutas por rama 12 h en el borde y 7 días en el navegador. El
+portal público pide siempre la URL de la rama (`{stage}/tenants.json`), **sin**
+`?v=` ni versiones con fecha.
+
+Para que una publicación se vea al instante, `sync-catalogo.js` **purga** en
+jsDelivr cada archivo que cambió, justo después del `git push`:
+
+```
+https://purge.jsdelivr.net/gh/hacobotdev/aregu-imgs@main/{stage}/tenants.json
+https://purge.jsdelivr.net/gh/hacobotdev/aregu-imgs@main/{stage}/tenant_{id}.json
+```
+
+- La purga corre solo si hubo push real; con `--no-git` no se purga (los
+  archivos todavía no están en GitHub).
+- `PURGAR_CDN=false` la desactiva; si falla, el script avisa y deja la URL para
+  purgarla a mano.
+- Las imágenes no necesitan purga: su nombre lleva el hash del contenido.
 
