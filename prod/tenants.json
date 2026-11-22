@@ -1,4 +1,67 @@
 {
-  "generado_en": "2026-11-20T17:16:52.307Z",
-  "tenants": []
+  "generado_en": "2026-11-22T06:33:16.548Z",
+  "tenants": [
+    {
+      "id": 1,
+      "nombre": "Cuenta Demo",
+      "descripcion": "Ofrecemos donas y cosas parecidas y muy deliciosas",
+      "latitud": 29.165861,
+      "longitud": -110.981682,
+      "horarios": [
+        {
+          "dias": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "cierre": "18:00",
+          "apertura": "09:00"
+        }
+      ],
+      "timezone": "America/Mexico_City"
+    },
+    {
+      "id": 3,
+      "nombre": "La Terraza 48",
+      "descripcion": "Somos la terraza y hazle como quieras me da igual perro",
+      "latitud": 29.168036,
+      "longitud": -110.981779,
+      "horarios": [
+        {
+          "dias": [
+            2,
+            3,
+            4
+          ],
+          "cierre": "18:00",
+          "apertura": "09:00"
+        }
+      ],
+      "timezone": "America/Mexico_City"
+    },
+    {
+      "id": 4,
+      "nombre": "Prueba",
+      "descripcion": "Somos un negocio de hamburguesas y cosas deliciosas",
+      "latitud": 29.10079,
+      "longitud": -110.975304,
+      "horarios": [
+        {
+          "dias": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "cierre": "18:00",
+          "apertura": "09:00"
+        }
+      ],
+      "timezone": "America/Mexico_City"
+    }
+  ]
 }
